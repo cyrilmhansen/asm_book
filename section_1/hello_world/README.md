@@ -389,7 +389,28 @@ level of assembly language. In the next version, which is written in ARM
 V8 assembly language, you'll see that just about every instruction has a
 one to one correspondence to the C code in version 4.
 
-## Version 5 - in Assembly Language
+## Version 5 - en Assembleur
+
+Voici le même programme écrit en assembleur RISC-V 64 bits.
+```asm
+     .global main                                                        // 1
+main:                                                                    // 2
+global main
+main:
+stp x21, x30, [sp, -16]!
+mov x21, x1
+
+top:
+ldr x0, [x21], 8
+beqz x0, bottom
+jal puts
+j top
+
+bottom:
+ldp x21, x30, [sp], 16
+mov x0, x0
+jr ra
+    .end                                                                // 17 
 
 Here is the same program written in ARM V8 assembly language.
 
