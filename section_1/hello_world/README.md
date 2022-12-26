@@ -1,14 +1,9 @@
-# Section 1 / Hello World
+# Section 1 / Bonjour le monde
 
-## Overview
+## Résumé
+Nous commençons par un programme C++ du genre "Bonjour le monde" et le décomposons en plusieurs versions de plus en plus proches d'un langage d'assemblage de haut niveau (connu également sous le nom de C). À la dernière étape, nous convertissons le C en langage d'assemblage ARM V8.
 
-We start out with a C++ program kind-of-like "Hello World" and break it
-down into several versions which are closer and closer to a high level
-assembly language (otherwise known as C). At the last step, we convert
-the C into ARM V8 assembly language.
-
-At every step, we'll completely explain the code and document what has
-changed from version to version so that little background is assumed.
+À chaque étape, nous expliquerons en détail le code et indiquerons les changements entre chaque version pour qu'un minimum de connaissances préalables soit nécessaires.
 
 ## V1 in C++
 
