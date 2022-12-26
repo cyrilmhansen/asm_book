@@ -1,4 +1,4 @@
-# A Gentle Introduction to Assembly Language Programming
+# WIP Trying to translate the content to French + RISCV-64 A Gentle Introduction to Assembly Language Programming
 
 This textbook provides a gentle introduction to assembly language
 programming. What makes this introduction "gentle" is that it assumes
