@@ -5,11 +5,10 @@ Nous commençons par un programme C++ du genre "Bonjour le monde" et le décompo
 
 À chaque étape, nous expliquerons en détail le code et indiquerons les changements entre chaque version pour qu'un minimum de connaissances préalables soit nécessaires.
 
-## V1 in C++
+## V1 en C++
 
-Here is the code to a program that prints to the console, the contents
-of `argv`, that is: the command line arguments specified when the
-program is run from the shell (command line).
+Voici le code d'un programme qui affiche dans la console le contenu de argv, c'est-à-dire: les arguments de ligne de commande spécifiés pour exécuter le programme.
+
 
 ```c++
 #include <iostream>                                         // 1 
@@ -23,10 +22,13 @@ int main(int argc, char * argv[]) {                         // 5
     return 0;                                               // 9 
 }                                                           // 10
 ```
+Voici un lien vers le programme sans numéros de ligne:
+Ici
 
-[Here](./v1.cpp) is a link to the program without line numbers.
 
-Here is the output of this program:
+[Voici](./v1.cpp) un lien vers le programme sans numéros de ligne.
+
+Voici la sortie de ce programme :
 
 ```text
 % ./a.out one two "three plus four"
@@ -37,10 +39,12 @@ three plus four
 % 
 ```
 
-As you can see in the output, the program printed each of the command
-line parameters (arguments) in the order in which they were specified.
-These come to your program stored in an array called (by convention)
-`argv` as the second parameter to `main()`.
+Comme vous pouvez le voir dans la sortie, le programme a imprimé chacun
+des paramètres de ligne de commande (arguments) dans l'ordre dans lequel
+ils ont été spécifiés. Ceux-ci sont stockés dans votre programme sous
+forme de tableau appelé par convention argv en tant que second
+paramètre de main().
+
 
 ### Line 1
 
