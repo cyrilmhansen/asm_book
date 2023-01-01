@@ -727,24 +727,27 @@ a `cbnz` instruction. To test for other Boolean conditions, use `cmp`.
 ### 5
 
 While this chapter is entitled "Hello World," the example used isn't actually "Hello World." Here is a "Hello World" for you to complete:
-
-```text
-   .global main                                                       
-main:                                                                 
-    str     x30, [sp, -16]!         // Preserve x30
-    ldr     x0, =HW                 // Load address of string for puts
-    WHAT GOES HERE?                 // puts(HW)                    
-    ldr     x30, [sp], 16           // Restore x30
-    mov     x0, xzr                 // return 0                        
-    ret                                                                
-
-    .data
-HW: .asciz  "Hello, World"                                                                       
-    .end                                                              
 ```
+.data
+str: .string "Hello, world!\n"
+
+.text
+main:
+  # Print the string to the console
+  la a0, str  # Load the address of the string into a0
+  WHAT GOES HERE li a7, 4    # Set the system call number to 4 (print string)
+  WHAT GOES HERE ecall       # Make the system call
+
+  # Exit the program
+  li a7, 10   # Set the system call number to 10 (exit)
+  ecall       # Make the system call
+```
+
+
 
 Answer:
 
 ```text
-    bl      puts
+   li a7, 4 
+   ecall
 ```
